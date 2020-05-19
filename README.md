@@ -24,7 +24,7 @@ The second part will dive into more advanced topics like TypeScript, state manag
 
 At this point, your VS Code window should look something like this:
 
-<img src="//imgur.com/tPkMwpb" width=500 />
+<img src="https://imgur.com/tPkMwpb" width=500 />
 
 To start the dev "inner loop," run:
 
@@ -34,7 +34,7 @@ npm start
 
 This will load the site shown below.
 
-<img src="//imgur.com/wMZSNgq" width=500 />
+<img src="https://imgur.com/wMZSNgq" width=500 />
 
 ### 3. Lesson Structure
 
