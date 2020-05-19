@@ -4,22 +4,13 @@
 
 In this two-part workshop you'll learn the basics of frontend development while building a working web app.
 
-The first part will introduce you to the fundamentals of frontend web development: HTML, CSS, JavaScript, and React. This is targeted at new and experienced developers. The second part will dive into more advanced topics like TypeScript, state management, testing, and Redux.
+The first part will introduce you to the fundamentals of frontend web development: HTML, CSS, JavaScript, and React.
+
+The second part will dive into more advanced topics like TypeScript, state management, testing, and Redux.
 
 ## Getting set up
 
-### 1. Required software
-
-Before starting, make sure your computer has up-to-date versions of the following installed:
-
-- [Node/NPM](https://nodejs.org/en/) (choose the **LTS** option, which should be version 12)
-- [Git](https://git-scm.com/downloads)
-- [Visual Studio Code](https://code.visualstudio.com)
-  - If using a Mac, also follow [these steps](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line) to install the `code` terminal command.
-  - If you already had VS Code installed, check for updates!
-- React Developer Tools for [Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) or [Firefox](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/)
-
-### 2. Installing and opening the project
+### 1. Installing and opening the project
 
 - Open VS Code and then press `` ctrl + ` `` (backtick, in top left corner of keyboard) to open the built-in terminal
 - Use the `cd` (change directory) command to find an appropriate place for your code
@@ -29,7 +20,7 @@ Before starting, make sure your computer has up-to-date versions of the followin
 - Type `code -r .` to open the bootcamp code in VS Code
   > If on a Mac, be sure you've followed [these steps](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line) first to make the `code` command available.
 
-### 3. Run the "inner loop" build
+### 2. Run the "inner loop" build
 
 At this point, your VS Code window should look something like this:
 
@@ -45,7 +36,7 @@ This will load the site shown below.
 
 <img src="https://user-images.githubusercontent.com/1434956/53656239-88426100-3c07-11e9-8456-e3d958aa4def.png" width=500 />
 
-### 4. Lesson Structure
+### 3. Lesson Structure
 
 1. Demos are done via CodePen (Steps 1, 2 and 3) or done in the step folder. Follow the steps in README.md to walk through the demo.
 
