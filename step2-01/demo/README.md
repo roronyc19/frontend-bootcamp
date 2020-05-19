@@ -126,22 +126,22 @@ Each promise instance exposes a `then()` function that is chainable. It also pro
 const aPromise = Promise.resolve('hello world');
 
 aPromise
-  .then(result => {
+  .then((result) => {
     return makeAnotherPromise();
   })
-  .then(result => {
+  .then((result) => {
     return makeYetAnotherPromise();
   })
-  .catch(err => {
+  .catch((err) => {
     console.error(err);
   });
 ```
 
-> For more information, see [this overview of promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) or [this deep dive](https://developers.google.com/web/fundamentals/primers/promises).
+> For more information, see [this overview of promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises) or [this deep dive](https://web.dev/promises).
 
 ## Async / await
 
-**Async / Await** is a language-level feature for writing asynchronous functions as if they are ordinary, synchronous code. JS support for this is built on top of `Promise`s and is inspired heavily by [C#'s async / await syntax](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/). An async function is written like this:
+**Async / Await** is a language-level feature for writing asynchronous functions as if they are ordinary, synchronous code. JS support for this is built on top of `Promise`s and is inspired heavily by [C#'s async / await syntax](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async). An async function is written like this:
 
 ```ts
 async function someFunctionAsync() {
@@ -154,7 +154,7 @@ async function someFunctionAsync() {
 All functions that are marked `async` return a `Promise` automatically. The previous example returned a `Promise<string>`, and can be used like this:
 
 ```ts
-someFunctionAsync().then(result => {
+someFunctionAsync().then((result) => {
   console.log(result);
 });
 ```

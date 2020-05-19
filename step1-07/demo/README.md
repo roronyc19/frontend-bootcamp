@@ -14,11 +14,11 @@ As applications grow, it becomes difficult to remember what each function does o
 
 For these two reasons, the industry is shifting to writing applications that are strongly typed, and many are using TypeScript to accomplish that.
 
-As [TypeScript's website](https://www.typescriptlang.org/) states:
+As [TypeScript's website](https://www.typescriptlang.org) states:
 
 > TypeScript is a superset of JavaScript that compiles to plain JavaScript.
 
-If you've used [Sass](https://sass-lang.com/), you're familiar with this concept. In the same way that all valid CSS is valid Sass, all valid JavaScript is valid TypeScript. That's why our exercises have been written in `ts` and `tsx` files instead of `js` and `jsx`.
+If you've used [Sass](https://sass-lang.com), you're familiar with this concept. In the same way that all valid CSS is valid Sass, all valid JavaScript is valid TypeScript. That's why our exercises have been written in `ts` and `tsx` files instead of `js` and `jsx`.
 
 Let's dive in and see how TypeScript can help clarify our component props and guard against future regressions.
 

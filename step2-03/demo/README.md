@@ -1,28 +1,28 @@
-# Step 2.3 - Theming and styling with UI Fabric (Demo)
+# Step 2.3 - Theming and styling with Fluent UI (Demo)
 
-[Lessons](../../) | [Exercise](../exercise/)
+[Lessons](../..) | [Exercise](../exercise)
 
-In this section, we will illustrate how to use some of the built-in theming and styling features of the UI Fabric component library.
+In this section, we will illustrate how to use some of the built-in theming and styling features of the Fluent UI component library.
 
 These are the theming and styling methods that we will focus on in this step:
 
 1. Theming using the `<Customizer>` component
 2. Customizing themes and loading with `loadTheme()`
-3. Customizing Fabric components via the `styles` prop
+3. Customizing Fluent components via the `styles` prop
 4. CSS-in-JS with `mergeStyles`
 
-The first three methods only work with Fabric components, but the fourth, `mergeStyles`, can be used in other projects as well (and is typically not used within Fabric-based projects).
+The first three methods only work with Fluent components, but the fourth, `mergeStyles`, can be used in other projects as well (and is typically not used within Fluent-based projects).
 
-## 1. Applying Fabric themes using `<Customizer>`
+## 1. Applying Fluent themes using `<Customizer>`
 
 One way to apply a theme is by wrapping the components to be themed with a `<Customizer>` component. `Customizer` propagates the theme down to children through the [React Context](https://reactjs.org/docs/context.html) mechanism.
 
-There are some predefined themes within Fabric already, like Fluent (which will become the default in the next major release), MDL2, Azure, and some other sample themes like Teams.
+There are some predefined themes within Fluent already, like Fluent (which will become the default in the next major release), MDL2, Azure, and some other sample themes like Teams.
 
 The following code (simplified from `demo/src/components/TodoApp.tsx`) shows an example of applying the Fluent theme to our todo app using `Customizer`.
 
 ```jsx
-import { Customizer } from 'office-ui-fabric-react';
+import { Customizer } from '@fluentui/react';
 import { FluentCustomizations } from '@uifabric/fluent-theme';
 
 function render() {
@@ -45,7 +45,7 @@ Another way to apply a theme is using the `loadTheme()` function. Themes loaded 
 To try out `loadTheme()` in our todo app, remove the `<Customizer>` tag from `TodoApp.tsx` and place this code in the module scope.
 
 ```ts
-import { loadTheme } from 'office-ui-fabric-react';
+import { loadTheme } from '@fluentui/react';
 
 loadTheme({
   palette: {
@@ -70,16 +70,16 @@ loadTheme({
     neutralPrimary: '#333333',
     neutralDark: '#272727',
     black: '#1d1d1d',
-    white: '#ffffff'
-  }
+    white: '#ffffff',
+  },
 });
 ```
 
-> If you'd like to create your own theme, the Fabric website has a [handy theme generator](https://aka.ms/themedesigner) to help get you started.
+> If you'd like to create your own theme, the Fluent website has a [handy theme generator](https://aka.ms/themedesigner) to help get you started.
 
-## 3. Customizing one Fabric control instance
+## 3. Customizing one Fluent control instance
 
-If you just want to customize a single component instance's styling, Fabric components expose a `styles` prop (not to be confused with the React built-in one called `style`).
+If you just want to customize a single component instance's styling, Fluent components expose a `styles` prop (not to be confused with the React built-in one called `style`).
 
 You can use intellisense to discover which parts of the component you can to customize.
 
@@ -91,15 +91,15 @@ The following code (simplified from `demo/src/components/TodoHeader.tsx`) demons
 function render() {
   const buttonStyles = {
     root: { backgroundColor: 'maroon' },
-    rootHovered: { background: 'green' }
+    rootHovered: { background: 'green' },
   };
 
   const textFieldStyles = (props: ITextFieldStyleProps): Partial<ITextFieldStyles> => ({
     ...(props.focused && {
       field: {
-        backgroundColor: '#c7e0f4'
-      }
-    })
+        backgroundColor: '#c7e0f4',
+      },
+    }),
   });
 
   return (
@@ -117,7 +117,7 @@ function render() {
 
 `mergeStyles` is a styling library that creates CSS class names from styles that are expressed as JavaScript objects. These classes can be used as the `className` prop of any component or element, such as `<div>`.
 
-This is an advanced approach which also works outside of Fabric. Within Fabric-based apps, you would typically only use `mergeStyles` in certain niche scenarios. (Fabric itself uses `mergeStyles` under the hood to power some of its styling.)
+This is an advanced approach which also works outside of Fluent. Within Fluent-based apps, you would typically only use `mergeStyles` in certain niche scenarios. (Fluent itself uses `mergeStyles` under the hood to power some of its styling.)
 
 Benefits of `mergeStyles` include:
 
@@ -133,15 +133,15 @@ The following is a basic example using mergeStyles. ([This CodePen](https://code
 import { mergeStyles } from '@uifabric/merge-styles';
 
 const blueBackgroundClassName = mergeStyles({
-  backgroundColor: 'green'
+  backgroundColor: 'green',
 });
 const className = mergeStyles(blueBackgroundClassName, {
   padding: 50, // px is assumed if no units are given
   selectors: {
     ':hover': {
-      backgroundColor: 'red'
-    }
-  }
+      backgroundColor: 'red',
+    },
+  },
 });
 
 const myDiv = <div className={className}>I am a green div that turns red on hover!</div>;

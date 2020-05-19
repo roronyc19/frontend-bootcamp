@@ -1,6 +1,6 @@
 # Step 1.5 - Building a static page in React (Exercise)
 
-From this exercise on, we'll be working in VS Code instead of CodePen. If you don't already have the bootcamp folder open in a VS Code window, see the [main readme](https://github.com/Microsoft/frontend-bootcamp/blob/master/README.md) for instructions.
+From this exercise on, we'll be working in VS Code instead of CodePen. If you don't already have the bootcamp folder open in a VS Code window, see the [main readme](https://github.com/wiljwang/frontend-bootcamp/blob/master/README.md) for instructions.
 
 If you don't already have the app running, start it by running `npm start` from the root of the `frontend-bootcamp` folder. Click the "exercise" link under day 1 step 5 to see results.
 

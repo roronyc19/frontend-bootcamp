@@ -1,6 +1,6 @@
 # Step 2.4 - React Context (Demo)
 
-[Lessons](../../) | [Exercise](../exercise/)
+[Lessons](../..) | [Exercise](../exercise)
 
 In this step, we describe some problems we encounter when creating a more complex application.
 
@@ -69,7 +69,8 @@ class TodoApp extends React.Component {
           addTodo: this._addTodo,
           setFilter: this._setFilter,
           /* same goes for remove, complete, and clear */
-        }}>
+        }}
+      >
         <div>
           <TodoHeader />
           <TodoList />
@@ -102,7 +103,7 @@ TodoHeader.contextType = TodoContext;
 If you're using the functional component syntax, you can access the context with the `useContext()` hook:
 
 ```js
-const TodoFooter = props => {
+const TodoFooter = (props) => {
   const context = useContext(TodoContext);
   return (
     <div>

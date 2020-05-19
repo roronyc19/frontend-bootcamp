@@ -1,8 +1,8 @@
-# Step 2.2 - UI Fabric component library (Demo)
+# Step 2.2 - Fluent UI component library (Demo)
 
-[Lessons](../../) | [Exercise](../exercise/)
+[Lessons](../..) | [Exercise](../exercise)
 
-[UI Fabric](https://developer.microsoft.com/en-us/fabric) is a component library that reflects the latest Microsoft design language. It is used in many Microsoft web applications and is [developed in the open](https://github.com/OfficeDev/office-ui-fabric-react).
+[Fluent UI](https://developer.microsoft.com/en-us/fluentui) is a component library that reflects the latest Microsoft design language. It is used in many Microsoft web applications and is [developed in the open](https://github.com/microsoft/fluentui).
 
 We'll talk about:
 
@@ -13,7 +13,7 @@ We'll talk about:
 
 ## What makes it good
 
-- Fabric has been developed BOTH by developers and design engineers working together as a team
+- Fluent has been developed BOTH by developers and design engineers working together as a team
 - Most notable Microsoft web products use it
 - It is documented both with examples and TypeScript API documentation
 - Components are highly customizable and themeable
@@ -26,17 +26,17 @@ We'll talk about:
 ## How to find it
 
 GitHub repo:
-https://github.com/officedev/office-ui-fabric-react
+https://github.com/microsoft/fluentui
 
 Documentation:
-https://developer.microsoft.com/en-us/fabric/#/components
+https://developer.microsoft.com/en-us/fluentui/#/controls/web
 
 ## How to use it
 
 ### Importing a component
 
 ```jsx
-import { DefaultButton } from 'office-ui-fabric-react';
+import { DefaultButton } from '@fluentui/react';
 
 const MyComponent = () => {
   return (
@@ -49,12 +49,12 @@ const MyComponent = () => {
 
 ### Customizing behavior of individual components
 
-Take a look at the [Button documentation](https://developer.microsoft.com/en-us/fabric#/components/button).
+Take a look at the [Button documentation](https://developer.microsoft.com/en-us/fluentui#/controls/web/button).
 
 From the documentation, we can see that if we want to render an icon along with the button's text, we can pass `iconProps` to the button:
 
 ```js
-import { DefaultButton } from 'office-ui-fabric-react';
+import { DefaultButton } from '@fluentui/react';
 
 const MyComponent = () => {
   return (
@@ -67,10 +67,10 @@ const MyComponent = () => {
 
 ### Customizing component rendering
 
-Some Fabric components take in a render functions to allow customizing certain parts of the component. An example with TextField:
+Some Fluent components take in a render functions to allow customizing certain parts of the component. An example with TextField:
 
 ```js
-import { TextField } from 'office-ui-fabric-react';
+import { TextField } from '@fluentui/react';
 
 const MyComponent = () => {
   return (
@@ -86,11 +86,11 @@ const MyComponent = () => {
 
 Before we start, let's look at flexbox--a modern CSS layout method which is powerful, but really, really complex to use:
 
-- A guide: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-- A tool: http://the-echoplex.net/flexyboxes/
+- A guide: https://css-tricks.com/snippets/css/a-guide-to-flexbox
+- A tool: http://the-echoplex.net/flexyboxes
 - Did you know there were three or so flexbox standards? (this means old articles may have non-working code)
 
-Fabric's answer is: Stack.
+Fluent's answer is: Stack.
 
 **Stack** is a container-type component that abstracts the usage of flexbox to define the layout of its child components.
 
@@ -105,4 +105,4 @@ Flexbox uses CSS styles to control:
 
 Stack abstracts these CSS styles and provides typings to make them more discoverable.
 
-Check out a cookbook of sorts in our [documentation](https://developer.microsoft.com/en-us/fabric#/components/stack).
+Check out a cookbook of sorts in our [documentation](https://developer.microsoft.com/en-us/fluentui#/controls/web/stack).

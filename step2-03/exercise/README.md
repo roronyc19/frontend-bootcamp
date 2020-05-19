@@ -1,12 +1,12 @@
-# Step 2.3 - Theming and styling with UI Fabric (Exercise)
+# Step 2.3 - Theming and styling with Fluent UI (Exercise)
 
-[Lessons](../../) | [Demo](../demo/)
+[Lessons](../..) | [Demo](../demo)
 
 If you don't already have the app running, start it by running `npm start` from the root of the `frontend-bootcamp` folder. Click the "exercise" link under day 2 step 3 to see results.
 
-## Applying Fabric themes
+## Applying Fluent themes
 
-Try applying some predefined themes from UI Fabric packages inside the TodoApp under `exercise/src/components/TodoApp.tsx`. Do this by replacing:
+Try applying some predefined themes from Fluent UI packages inside the TodoApp under `exercise/src/components/TodoApp.tsx`. Do this by replacing:
 
 ```ts
 import { FluentCustomizations } from '@uifabric/fluent-theme';
@@ -20,7 +20,7 @@ import { TeamsCustomizations } from '@uifabric/theme-samples';
 
 ## Applying customized themes
 
-1. Create your own theme using the [theme generator](https://developer.microsoft.com/en-us/fabric#/styles/themegenerator) and copy the generated code.
+1. Create your own theme using the [theme generator](https://developer.microsoft.com/en-us/fluentui#/styles/web) and copy the generated code.
 
 2. In `exercise/src/components/TodoApp.tsx`, delete the `Customizer` component.
 
@@ -28,7 +28,7 @@ import { TeamsCustomizations } from '@uifabric/theme-samples';
 
 4. Play around with the values and use VS Code's intellisense to discover more properties of the `ITheme` type.
 
-## Customizing one Fabric control instance
+## Customizing one Fluent control instance
 
 1. Open `exercise/src/components/TodoFooter.tsx`
 
@@ -40,20 +40,20 @@ import { TeamsCustomizations } from '@uifabric/theme-samples';
 
 ## CSS-in-JS with `mergeStyles`
 
-As mentioned in the demo, this is an advanced approach which also works outside of Fabric. You wouldn't typically use this approach within a Fabric-based app.
+As mentioned in the demo, this is an advanced approach which also works outside of Fluent. You wouldn't typically use this approach within a Fluent-based app.
 
 1. Try generating a class name using `mergeStyles` and use it as a `className` prop inside `TodoApp`
 
 ```jsx
-import { mergeStyles } from 'office-ui-fabric-react';
+import { mergeStyles } from '@fluentui/react';
 
 const className = mergeStyles({
   backgroundColor: 'red',
   selectors: {
     ':hover': {
-      backgroundColor: 'blue'
-    }
-  }
+      backgroundColor: 'blue',
+    },
+  },
 });
 ```
 

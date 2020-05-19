@@ -1,6 +1,6 @@
 # Step 2.5 - Redux: The Store (Demo)
 
-[Lessons](../../) | [Exercise](../exercise/)
+[Lessons](../..) | [Exercise](../exercise)
 
 In this step, we will look at solving the problems of complex applications (as mentioned in Step 4) with a library called [Redux](https://redux.js.org).
 
@@ -60,7 +60,7 @@ const store = createStore(reducer, initialState);
 
 ### Writing reducers
 
-We'll write our reducers with the help of some utilities from the official [`redux-starter-kit`](https://redux-starter-kit.js.org/), which greatly decreases the amount of boilerplate needed. The process for designing and implementing reducers is as follows:
+We'll write our reducers with the help of some utilities from the official [`redux-starter-kit`](https://redux-starter-kit.js.org), which greatly decreases the amount of boilerplate needed. The process for designing and implementing reducers is as follows:
 
 #### 1. Organize reducers according to the keys of the state tree object
 
@@ -83,13 +83,20 @@ import { createReducer } from 'redux-starter-kit';
 import { combineReducers } from 'redux';
 
 const reducer = combineReducers({
-  todos: createReducer({}, {
-    addTodo: (state, action) => { /* ... */ }
-  }),
+  todos: createReducer(
+    {},
+    {
+      addTodo: (state, action) => {
+        /* ... */
+      },
+    }
+  ),
   filter: createReducer('all', {
-    setFilter: (state, action) => { /* ... */ }
-  })
-})
+    setFilter: (state, action) => {
+      /* ... */
+    },
+  }),
+});
 ```
 
 #### 2. Write the reducers with mutables
@@ -104,7 +111,7 @@ const todosReducer = createReducer(
   {
     addTodo: (state, action) => {
       state[action.id] = { label: action.label, completed: false };
-    }
+    },
   }
 );
 ```
@@ -124,7 +131,7 @@ Creating these action messages by hand is tedious, so we use action creators to 
 
 ```ts
 const actions = {
-  addTodo = (label: string) => ({ label, id: nextId(), completed: false })
+  addTodo = (label: string) => ({ label, id: nextId(), completed: false }),
 };
 
 store.dispatch(actions.addTodo('hello'));

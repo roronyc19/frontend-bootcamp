@@ -1,12 +1,12 @@
 # Step 2.6 - Redux: React binding (Demo)
 
-[Lessons](../../) | [Exercise](../exercise/)
+[Lessons](../..) | [Exercise](../exercise)
 
 Redux is currently the most popular Flux implementation, and the ecosystem of related libraries has grown as a result. This is one of the reasons why it is a very popular library within Microsoft products.
 
 Various GitHub users have collected "awesome lists" of tech and articles related to Redux. Here is [one such list](https://github.com/xgrommx/awesome-redux#react---a-javascript-library-for-building-user-interfaces), but it is literally impossible to list out all the related tech.
 
-In this step, we introduce one useful library that works with Redux: [`react-redux`](https://react-redux.js.org/). Whereas the Step 2.5 code could be used with any web UI framework, we'll now use `react-redux` to connect the store to our React app. There are two steps in this process:
+In this step, we introduce one useful library that works with Redux: [`react-redux`](https://react-redux.js.org). Whereas the Step 2.5 code could be used with any web UI framework, we'll now use `react-redux` to connect the store to our React app. There are two steps in this process:
 
 1. Providing the store to the views
 2. Mapping the store to props

@@ -65,7 +65,7 @@ I've already pulled out our props into `filter` and `todos` variables, and writt
 ```jsx
 return (
   <ul className="todos">
-    {filteredTodos.map(id => (
+    {filteredTodos.map((id) => (
       <TodoListItem key={id} id={id} {...todos[id]} />
     ))}
   </ul>
@@ -98,7 +98,7 @@ An **uncontrolled input** maintains its current value internally and updates it 
 
 A **controlled input** takes its current value from a prop and use a callback to notify the parent component of changes made by the user. The input's value doesn't change until the parent component updates the input's props in response to the callback.
 
-> The distinction between controlled and uncontrolled is important to understand when writing or using form components, and misunderstandings of this concept are a very common source of bugs. See [this article](https://goshakkk.name/controlled-vs-uncontrolled-inputs-react/) for a more detailed explanation.
+> The distinction between controlled and uncontrolled is important to understand when writing or using form components, and misunderstandings of this concept are a very common source of bugs. See [this article](https://goshakkk.name/controlled-vs-uncontrolled-inputs-react) for a more detailed explanation.
 
 Let's try changing the text field in our `TodoHeader` component to a controlled input. To add a controlled input, we need two things, which our demo already provides:
 
@@ -111,7 +111,7 @@ this.state = { labelInput: '' };
 2. A callback function to update that value:
 
 ```jsx
-_onChange = evt => {
+_onChange = (evt) => {
   this.setState({ labelInput: evt.target.value });
 };
 ```
