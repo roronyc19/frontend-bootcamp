@@ -24,7 +24,7 @@ The second part will dive into more advanced topics like TypeScript, state manag
 
 At this point, your VS Code window should look something like this:
 
-<img src="https://user-images.githubusercontent.com/1434956/53654442-9c379400-3c02-11e9-8768-d19e092b606d.png" width=500 />
+<img src="//imgur.com/tPkMwpb" width=500 />
 
 To start the dev "inner loop," run:
 
@@ -34,17 +34,15 @@ npm start
 
 This will load the site shown below.
 
-<img src="https://user-images.githubusercontent.com/1434956/53656239-88426100-3c07-11e9-8456-e3d958aa4def.png" width=500 />
+<img src="//imgur.com/wMZSNgq" width=500 />
 
 ### 3. Lesson Structure
 
-1. Demos are done via CodePen (Steps 1, 2 and 3) or done in the step folder. Follow the steps in README.md to walk through the demo.
+Demos are done in CodePen (steps 1, 2, and 3) or the step folder. Follow the steps in README.md to walk through the demo.
 
-2. Exercises are done via CodePen or in the step folder. They will give you an opportunity to try what was demonstrated in the demo.
+Exercises are done in CodePen or the step folder. They will give you an opportunity to try what was demonstrated in the demo.
 
 ### Part one
-
-Day one covers the basics of HTML, CSS and JavaScript, as well as an introduction to React and TypeScript.
 
 1. [Introduction to HTML](step1-01)
 2. [Introduction to CSS](step1-02)
@@ -70,6 +68,6 @@ Day one covers the basics of HTML, CSS and JavaScript, as well as an introductio
 
 ## Additional resources
 
-- [MDN Web Docs](https://developer.mozilla.org/en-US/)
+- [MDN Web Docs](https://developer.mozilla.org/en-US)
 - [React Docs](https://reactjs.org/docs/getting-started.html)
 - [Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
