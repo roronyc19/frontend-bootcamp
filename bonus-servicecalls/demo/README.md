@@ -1,6 +1,6 @@
 # Bonus: Service calls (Demo)
 
-[Lessons](../../)
+[Lessons](../..)
 
 > Note: this step doesn't work with the live site on github.io. Clone the repo to try this step out.
 
@@ -16,7 +16,7 @@ Most of the time, in a single-page app, we apply **optimistic UI updates**. We c
 
 ## Action creator with a thunk
 
-[What's a thunk?](https://daveceddia.com/what-is-a-thunk/) - it is a wrapper function that returns a function. What does it do? Let's find out!
+[What's a thunk?](https://daveceddia.com/what-is-a-thunk) - it is a wrapper function that returns a function. What does it do? Let's find out!
 
 This action creator just returns an object:
 

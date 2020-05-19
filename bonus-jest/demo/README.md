@@ -1,8 +1,8 @@
 # Bonus: Testing TypeScript code with Jest (Demo)
 
-[Lessons](../../) | [Exercise](../exercise/)
+[Lessons](../..) | [Exercise](../exercise)
 
-[Jest](https://jestjs.io/) is a test framework made by Facebook and is very popular in the React and wider JS ecosystems.
+[Jest](https://jestjs.io) is a test framework made by Facebook and is very popular in the React and wider JS ecosystems.
 
 In this exercise, we will work on implementing simple unit tests using Jest.
 
@@ -36,11 +36,11 @@ describe('Something to be tested', () => {
 - `it()` takes a string describing the behavior to be tested and a function to run the test.
 - `expect()` takes the actual value as a parameter and returns an object with various "matcher" methods to test against an expected value/condition. `toBe` is just one of [many available matchers](https://jestjs.io/docs/en/expect).
 
-> When choosing test names, think of the strings passed to `describe` and `it` as forming a sentence. For example, inside  `describe('MyComponent', ...)` you might have a test `it('renders some text', ...)`, which forms the sentence a sentence describing the behavior: "MyComponent renders some text."
+> When choosing test names, think of the strings passed to `describe` and `it` as forming a sentence. For example, inside `describe('MyComponent', ...)` you might have a test `it('renders some text', ...)`, which forms the sentence a sentence describing the behavior: "MyComponent renders some text."
 
 ## Testing React components using Enzyme
 
-[Enzyme](https://airbnb.io/enzyme/) is made by Airbnb and provides utilities to help test React components.
+[Enzyme](https://enzymejs.github.io/enzyme) is made by Airbnb and provides utilities to help test React components.
 
 In a real app using ReactDOM, the top-level component will be rendered on the page using `ReactDOM.render()`. Enzyme provides a lighter-weight `mount()` function which is usually adequate for testing purposes.
 
@@ -85,7 +85,7 @@ To mock a function:
 
 ```ts
 it('some test function', () => {
-  const mockCallback = jest.fn(x => 42 + x);
+  const mockCallback = jest.fn((x) => 42 + x);
   mockCallback(1);
   mockCallback(2);
   expect(mockCallback).toHaveBeenCalledTimes(2);
