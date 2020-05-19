@@ -12,13 +12,12 @@ The second part will dive into more advanced topics like TypeScript, state manag
 
 ### 1. Installing and opening the project
 
-- Open VS Code and then press `` ctrl + ` `` (backtick, in top left corner of keyboard) to open the built-in terminal
-- Use the `cd` (change directory) command to find an appropriate place for your code
+- Open your terminal and use the `cd` (change directory) command to find an appropriate place for your code (for example, type `mkdir react-projects` followed by `cd react-projects` to create and go to a new empty folder dedicated to React development)
 - Type `git clone https://github.com/wiljwang/frontend-bootcamp.git` into the terminal to pull down a copy of the workshop code
 - Type `cd frontend-bootcamp` to change your current directory to the bootcamp folder
 - Type `npm install` to install all of the project dependencies
-- Type `code -r .` to open the bootcamp code in VS Code
-  > If on a Mac, be sure you've followed [these steps](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line) first to make the `code` command available.
+- Type `code .` to open the bootcamp code in VS Code
+  > If you're on a Mac, make sure you've followed [these steps](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line) first to make the `code` command available.
 
 ### 2. Run the "inner loop" build
 
