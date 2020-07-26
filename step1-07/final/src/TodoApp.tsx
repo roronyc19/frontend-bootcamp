@@ -11,7 +11,7 @@ export class TodoApp extends React.Component<{}, { todos: Todos; filter: FilterT
     super(props);
     this.state = {
       todos: {},
-      filter: 'all'
+      filter: 'all',
     };
   }
 
@@ -26,22 +26,22 @@ export class TodoApp extends React.Component<{}, { todos: Todos; filter: FilterT
     );
   }
 
-  private _addTodo = label => {
+  private _addTodo = (label) => {
     const { todos } = this.state;
     const id = index++;
 
     this.setState({
-      todos: { ...todos, [id]: { label, completed: false } }
+      todos: { ...todos, [id]: { label, completed: false } },
     });
   };
 
-  private _complete = id => {
+  private _complete = (id) => {
     const { todos } = this.state;
     const todo = todos[id];
     const newTodos = { ...todos, [id]: { ...todo, completed: !todo.completed } };
 
     this.setState({
-      todos: newTodos
+      todos: newTodos,
     });
   };
 
@@ -49,20 +49,20 @@ export class TodoApp extends React.Component<{}, { todos: Todos; filter: FilterT
     const { todos } = this.state;
     const newTodos = {};
 
-    Object.keys(this.state.todos).forEach(id => {
+    Object.keys(this.state.todos).forEach((id) => {
       if (!todos[id].completed) {
         newTodos[id] = todos[id];
       }
     });
 
     this.setState({
-      todos: newTodos
+      todos: newTodos,
     });
   };
 
-  private _setFilter = filter => {
+  private _setFilter = (filter) => {
     this.setState({
-      filter: filter
+      filter: filter,
     });
   };
 }

@@ -22,7 +22,9 @@ export class TodoHeader extends React.Component<TodoHeaderProps, TodoHeaderState
     return (
       <Stack gap={10}>
         <Stack horizontal horizontalAlign="center">
-          <Text variant="xxLarge">todos <Text variant="mediumPlus">(2.3 demo)</Text></Text>
+          <Text variant="xxLarge">
+            todos <Text variant="mediumPlus">(2.3 demo)</Text>
+          </Text>
         </Stack>
 
         <Stack horizontal gap={10}>
@@ -31,12 +33,12 @@ export class TodoHeader extends React.Component<TodoHeaderProps, TodoHeaderState
               placeholder="What needs to be done?"
               value={this.state.labelInput}
               onChange={this.onChange}
-              styles={props => ({
+              styles={(props) => ({
                 ...(props.focused && {
                   field: {
-                    backgroundColor: '#c7e0f4'
-                  }
-                })
+                    backgroundColor: '#c7e0f4',
+                  },
+                }),
               })}
             />
           </Stack.Item>

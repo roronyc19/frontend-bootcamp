@@ -8,7 +8,7 @@ interface TodoFooterProps {
 }
 
 export const TodoFooter = (props: TodoFooterProps) => {
-  const itemCount = Object.keys(props.todos).filter(id => !props.todos[id].completed).length;
+  const itemCount = Object.keys(props.todos).filter((id) => !props.todos[id].completed).length;
 
   return (
     <Stack horizontal horizontalAlign="space-between" verticalAlign="center">
@@ -18,7 +18,7 @@ export const TodoFooter = (props: TodoFooterProps) => {
       <DefaultButton
         onClick={() => props.clear()}
         styles={{
-          root: { fontStyle: 'oblique' }
+          root: { fontStyle: 'oblique' },
         }}
       >
         Clear Completed

@@ -14,7 +14,7 @@ export const todosReducer = createReducer<Store['todos']>(
     },
 
     clear(state, action) {
-      Object.keys(state).forEach(key => {
+      Object.keys(state).forEach((key) => {
         if (state[key].completed) {
           delete state[key];
         }
@@ -27,17 +27,17 @@ export const todosReducer = createReducer<Store['todos']>(
 
     edit(state, action) {
       // TODO: implement this reducer
-    }
+    },
   }
 );
 
 export const filterReducer = createReducer<Store['filter']>('all', {
   setFilter(state, action) {
     return action.filter;
-  }
+  },
 });
 
 export const reducer = combineReducers({
   todos: todosReducer,
-  filter: filterReducer
+  filter: filterReducer,
 });

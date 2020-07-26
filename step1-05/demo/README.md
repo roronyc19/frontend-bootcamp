@@ -61,6 +61,7 @@ export class TodolistItem extends React.Component<any, any> {
 ```
 
 > Note that this control could also be created as a function instead of a class:
+>
 > ```jsx
 > export const TodoListItem = (props) => {
 >   return (
@@ -70,5 +71,5 @@ export class TodolistItem extends React.Component<any, any> {
 >       </label>
 >     </li>
 >   );
-> }
+> };
 > ```

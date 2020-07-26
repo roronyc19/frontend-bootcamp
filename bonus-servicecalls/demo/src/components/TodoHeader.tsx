@@ -32,12 +32,12 @@ class TodoHeader extends React.Component<TodoHeaderProps, TodoHeaderState> {
               placeholder="What needs to be done?"
               value={this.state.labelInput}
               onChange={this.onChange}
-              styles={props => ({
+              styles={(props) => ({
                 ...(props.focused && {
                   field: {
-                    backgroundColor: '#c7e0f4'
-                  }
-                })
+                    backgroundColor: '#c7e0f4',
+                  },
+                }),
               })}
             />
           </Stack.Item>
@@ -68,10 +68,10 @@ class TodoHeader extends React.Component<TodoHeaderProps, TodoHeaderState> {
 }
 
 const ConnectedTodoHeader = connect(
-  state => ({}),
+  (state) => ({}),
   (dispatch: any) => ({
-    addTodo: label => dispatch(actionsWithService.addTodo(label)),
-    setFilter: filter => dispatch(actions.setFilter(filter))
+    addTodo: (label) => dispatch(actionsWithService.addTodo(label)),
+    setFilter: (filter) => dispatch(actions.setFilter(filter)),
   })
 )(TodoHeader);
 

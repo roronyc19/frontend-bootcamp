@@ -21,7 +21,7 @@ const myCar: Car = {
   wheels: 4,
   color: 'blue',
   make: 'Toyota',
-  model: 'Camry'
+  model: 'Camry',
 };
 // JSON.stringify makes a nice string representation of an object
 console.log('My car:', JSON.stringify(myCar));
@@ -38,13 +38,13 @@ const obj1 = {
   first: 'who',
   second: 'what',
   third: 'dunno',
-  left: 'why'
+  left: 'why',
 };
 
 const obj2 = {
   center: 'because',
   pitcher: 'tomorrow',
-  catcher: 'today'
+  catcher: 'today',
 };
 
 const megaObj = { ...obj1, ...obj2 };

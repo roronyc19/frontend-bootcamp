@@ -60,7 +60,7 @@ class TodoListItem extends React.Component<TodoListItemProps, TodoListItemState>
 
     this.setState({
       editing: true,
-      editLabel: this.state.editLabel || label
+      editLabel: this.state.editLabel || label,
     });
   };
 
@@ -68,7 +68,7 @@ class TodoListItem extends React.Component<TodoListItemProps, TodoListItemState>
     this.props.edit(this.props.id, this.state.editLabel);
     this.setState({
       editing: false,
-      editLabel: undefined
+      editLabel: undefined,
     });
   };
 
@@ -79,10 +79,10 @@ class TodoListItem extends React.Component<TodoListItemProps, TodoListItemState>
 
 const ConnectedTodoListItem = connect(
   (state: Store) => ({ todos: state.todos }),
-  dispatch => ({
-    complete: id => dispatch(actions.complete(id)),
-    remove: id => dispatch(actions.remove(id)),
-    edit: (id, label) => dispatch(actions.edit(id, label))
+  (dispatch) => ({
+    complete: (id) => dispatch(actions.complete(id)),
+    remove: (id) => dispatch(actions.remove(id)),
+    edit: (id, label) => dispatch(actions.edit(id, label)),
   })
 )(TodoListItem);
 

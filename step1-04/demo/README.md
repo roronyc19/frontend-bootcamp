@@ -38,7 +38,7 @@ class App extends React.Component {
 We could also write this component as a function:
 
 ```jsx
-const App = props => {
+const App = (props) => {
   return <p>Hello World</p>;
 };
 ```
@@ -62,7 +62,7 @@ Whether you write the component as a class or a function, it can take in additio
 The `text` prop can be accessed inside your component via `props.text` in a function component or `this.props.text` in a class component.
 
 ```jsx
-const App = props => {
+const App = (props) => {
   return <p>{props.text}</p>;
 };
 ```
@@ -82,7 +82,7 @@ ReactDOM.render(
 > Note that a render function can only return a single element, so our two `App` components need to be wrapped in a `div`.
 
 ```jsx
-const App = props => {
+const App = (props) => {
   return <p>{props.text ? props.text : 'oops!'}</p>;
 };
 ```
@@ -92,7 +92,7 @@ const App = props => {
 Writing `props.text` over and over in a function (or `this.props.text` in a class) can be quite tedious. Since this is all JavaScript, you could create a new variable for this text using variable assignment.
 
 ```jsx
-const App = props => {
+const App = (props) => {
   const text = props.text;
   return <p>{text ? text : 'you missed something'}</p>;
 };
@@ -109,7 +109,7 @@ This works fine for a single prop, but as your component starts to become more c
   config={{
     start: 1,
     end: 10,
-    autoStart: true
+    autoStart: true,
   }}
 />
 ```
@@ -137,7 +137,7 @@ const {
   text,
   count,
   items,
-  config: { start, end }
+  config: { start, end },
 } = props;
 ```
 
@@ -150,7 +150,7 @@ Before we move on, we'll modify our `ReactDOM.render` call to just include our A
 Next we'll be creating a `Counter` component. We'll add that to our App now, and then start to write the control.
 
 ```jsx
-const App = props => {
+const App = (props) => {
   return <Counter text="chickens" />;
 };
 
@@ -174,7 +174,7 @@ class Counter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      clicks: 0
+      clicks: 0,
     };
   }
 }
@@ -212,7 +212,7 @@ This function will update our component's state, incrementing the clicks value b
 ```jsx
 _onButtonClick = () => {
   this.setState({
-    clicks: this.state.clicks + 1
+    clicks: this.state.clicks + 1,
   });
 };
 ```
@@ -279,7 +279,7 @@ Buttons are among the most commonly written components. Custom buttons help abst
 import React from 'react';
 import './Button.css';
 
-export const Button = props => {
+export const Button = (props) => {
   return (
     <button className="Button" onClick={props.onClick}>
       {props.children}

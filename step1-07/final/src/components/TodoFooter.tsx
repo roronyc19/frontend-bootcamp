@@ -6,7 +6,7 @@ interface TodoFooterProps {
 }
 
 export const TodoFooter = (props: TodoFooterProps) => {
-  const itemCount = Object.keys(props.todos).filter(id => !props.todos[id].completed).length;
+  const itemCount = Object.keys(props.todos).filter((id) => !props.todos[id].completed).length;
   const _onClick = () => {
     props.clear();
   };

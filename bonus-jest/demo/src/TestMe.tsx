@@ -18,7 +18,7 @@ export const TestMe = (props: TestMeProps) => {
 
 export class InnerMe extends React.Component<TestMeProps, TestMeState> {
   state = {
-    clicked: false
+    clicked: false,
   };
 
   onClick = () => {

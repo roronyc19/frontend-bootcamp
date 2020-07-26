@@ -10,22 +10,22 @@ export class TodoApp extends React.Component<any, any> {
       todos: {
         '04': {
           label: 'Todo 4',
-          completed: true
+          completed: true,
         },
         '03': {
           label: 'Todo 3',
-          completed: false
+          completed: false,
         },
         '02': {
           label: 'Todo 2',
-          completed: false
+          completed: false,
         },
         '01': {
           label: 'Todo 1',
-          completed: false
-        }
+          completed: false,
+        },
       },
-      filter: 'all'
+      filter: 'all',
     };
   }
   render() {

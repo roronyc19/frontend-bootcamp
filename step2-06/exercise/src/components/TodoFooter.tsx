@@ -14,7 +14,7 @@ interface TodoFooterProps {
 const TodoFooter = (props: TodoFooterProps) => {
   const { todos, clear } = props;
 
-  const itemCount = Object.keys(todos).filter(id => !todos[id].completed).length;
+  const itemCount = Object.keys(todos).filter((id) => !todos[id].completed).length;
 
   return (
     <Stack horizontal horizontalAlign="space-between" verticalAlign="center">

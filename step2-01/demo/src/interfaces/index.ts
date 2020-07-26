@@ -17,7 +17,7 @@ const myCar1: Car = new MyCar('Honda', 'Accord');
 
 const myCar2: Car = {
   make: 'Honda',
-  model: 'Accord'
+  model: 'Accord',
 };
 
 // Interface for a function

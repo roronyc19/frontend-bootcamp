@@ -5,7 +5,7 @@ export class Counter extends React.Component<any, any> {
   constructor(props) {
     super(props);
     this.state = {
-      clicks: 0
+      clicks: 0,
     };
   }
   render() {
@@ -21,7 +21,7 @@ export class Counter extends React.Component<any, any> {
 
   _onButtonClick = () => {
     this.setState({
-      clicks: this.state.clicks + 1
+      clicks: this.state.clicks + 1,
     });
   };
 }

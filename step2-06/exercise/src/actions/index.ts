@@ -6,5 +6,5 @@ export const actions = {
   complete: (id: string) => ({ type: 'complete', id }),
   clear: () => ({ type: 'clear' }),
   setFilter: (filter: string) => ({ type: 'setFilter', filter }),
-  edit: (id: string, label: string) => ({ type: 'edit', id, label })
+  edit: (id: string, label: string) => ({ type: 'edit', id, label }),
 };

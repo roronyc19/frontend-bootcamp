@@ -57,7 +57,7 @@ export class TodoListItem extends React.Component<TodoListItemProps, TodoListIte
 
     this.setState({
       editing: true,
-      editLabel: this.state.editLabel || label
+      editLabel: this.state.editLabel || label,
     });
   };
 
@@ -65,7 +65,7 @@ export class TodoListItem extends React.Component<TodoListItemProps, TodoListIte
     this.props.edit(this.props.id, this.state.editLabel);
     this.setState({
       editing: false,
-      editLabel: undefined
+      editLabel: undefined,
     });
   };
 

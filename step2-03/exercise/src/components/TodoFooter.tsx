@@ -8,7 +8,7 @@ interface TodoFooterProps {
 }
 
 export const TodoFooter = (props: TodoFooterProps) => {
-  const itemCount = Object.keys(props.todos).filter(id => !props.todos[id].completed).length;
+  const itemCount = Object.keys(props.todos).filter((id) => !props.todos[id].completed).length;
 
   // TODO: play around with the DefaultButton component below with a "styles" prop
   // - try it with an object: styles={{ ... }}

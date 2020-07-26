@@ -28,7 +28,7 @@ function* getEntryPoint(step) {
   return false;
 }
 
-fs.readdirSync('./').filter(step => {
+fs.readdirSync('./').filter((step) => {
   let isEntryPoint = false;
 
   for (let entryPoint of getEntryPoint(step)) {
@@ -56,83 +56,83 @@ module.exports = function (env, argv) {
           use: {
             loader: 'ts-loader',
             options: {
-              transpileOnly: true
-            }
+              transpileOnly: true,
+            },
           },
-          exclude: /node_modules/
+          exclude: /node_modules/,
         },
         {
           test: /\.css$/,
           use: ['style-loader', 'css-loader'],
-          exclude: /node_modules/
-        }
-      ]
+          exclude: /node_modules/,
+        },
+      ],
     },
     plugins: [
-      ...Object.keys(entries).map(entry => {
+      ...Object.keys(entries).map((entry) => {
         return new HtmlWebpackPlugin({
           template: path.join(__dirname, entry, 'index.html'),
           filename: `${entry}/index.html`,
-          chunks: [entry, 'markdownReadme']
+          chunks: [entry, 'markdownReadme'],
         });
       }),
       new CopyWebpackPlugin([
-        ...Object.keys(entries).map(entry => {
+        ...Object.keys(entries).map((entry) => {
           return {
             from: `${entry}/src/**/*`,
-            to: outPath
+            to: outPath,
           };
         }),
-        ...Object.keys(entries).map(entry => {
+        ...Object.keys(entries).map((entry) => {
           return {
             from: `${entry}/../*.+(md|html)`,
-            to: outPath
+            to: outPath,
           };
         }),
-        ...Object.keys(entries).map(entry => {
+        ...Object.keys(entries).map((entry) => {
           return {
             from: `${entry}/*.+(md|html)`,
-            to: outPath
+            to: outPath,
           };
         }),
         {
           from: 'assets/**/*',
-          to: outPath
+          to: outPath,
         },
         {
           from: 'index.html',
-          to: outPath
+          to: outPath,
         },
-        ...nonWebpackedEntries.map(entry => ({ from: `${entry}/**/*`, to: outPath }))
+        ...nonWebpackedEntries.map((entry) => ({ from: `${entry}/**/*`, to: outPath })),
       ]),
       new ForkTsCheckerWebpackPlugin({
         silent: true,
-        async: false
-      })
+        async: false,
+      }),
     ],
     resolve: {
       extensions: ['.tsx', '.ts', '.js'],
       alias: {
         'react-dom$': 'react-dom/profiling',
-        'scheduler/tracing': 'scheduler/tracing-profiling'
-      }
+        'scheduler/tracing': 'scheduler/tracing-profiling',
+      },
     },
     output: {
       filename: '[name]/bundle.js',
-      path: outPath
+      path: outPath,
     },
     devServer: {
       contentBase: path.resolve(__dirname),
       watchContentBase: true,
       watchOptions: {
-        ignored: /tmp.json/
+        ignored: /tmp.json/,
       },
       hot: false,
       stats: 'errors-only',
       overlay: true,
-      inline: true
+      inline: true,
     },
     stats: 'minimal',
-    devtool: argv.mode === 'development' ? 'eval' : 'source-map'
+    devtool: argv.mode === 'development' ? 'eval' : 'source-map',
   };
 };

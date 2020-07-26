@@ -21,7 +21,7 @@ const store = {
     fs.writeFileSync('tmp.json', JSON.stringify(store.todos));
   },
 
-  todos: {}
+  todos: {},
 };
 
 app.use(bodyParser.json());

@@ -31,13 +31,13 @@ const obj1 = {
   first: 'who',
   second: 'what',
   third: 'dunno',
-  left: 'why'
+  left: 'why',
 };
 
 const obj2 = {
   center: 'because',
   pitcher: 'tomorrow',
-  catcher: 'today'
+  catcher: 'today',
 };
 
 // TODO: combine obj1 and obj2 into a single object megaObj using spread syntax

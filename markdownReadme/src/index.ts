@@ -27,11 +27,11 @@ async function run() {
     div.innerHTML = marked(markdownText);
     restoreScroll(div);
 
-    div.addEventListener('scroll', evt => {
+    div.addEventListener('scroll', (evt) => {
       saveScroll(div);
     });
 
-    window.addEventListener('resize', evt => {
+    window.addEventListener('resize', (evt) => {
       saveScroll(div);
     });
   }

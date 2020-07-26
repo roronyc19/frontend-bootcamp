@@ -22,7 +22,9 @@ export class TodoHeader extends React.Component<TodoHeaderProps, TodoHeaderState
     return (
       <Stack>
         <Stack horizontal horizontalAlign="center">
-          <Text variant="xxLarge">todos <Text variant="mediumPlus">(2.2 demo)</Text></Text>
+          <Text variant="xxLarge">
+            todos <Text variant="mediumPlus">(2.2 demo)</Text>
+          </Text>
         </Stack>
 
         <Stack horizontal>

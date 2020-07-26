@@ -5,7 +5,7 @@ export function namedFn() {
 }
 
 export const namedObj = {
-  hello: 'world'
+  hello: 'world',
 };
 
 const namedConstBracket = 10;

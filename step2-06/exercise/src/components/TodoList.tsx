@@ -11,13 +11,13 @@ interface TodoListProps {
 
 const TodoList = (props: TodoListProps) => {
   const { filter, todos } = props;
-  const filteredTodos = Object.keys(todos).filter(id => {
+  const filteredTodos = Object.keys(todos).filter((id) => {
     return filter === 'all' || (filter === 'completed' && todos[id].completed) || (filter === 'active' && !todos[id].completed);
   });
 
   return (
     <Stack gap={10}>
-      {filteredTodos.map(id => (
+      {filteredTodos.map((id) => (
         <TodoListItem key={id} id={id} />
       ))}
     </Stack>

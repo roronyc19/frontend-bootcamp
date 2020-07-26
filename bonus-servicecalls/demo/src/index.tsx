@@ -13,7 +13,7 @@ import { Store, FilterTypes } from './store';
 (async () => {
   const preloadStore = {
     todos: (await service.getAll()) as Store['todos'],
-    filter: 'all' as FilterTypes
+    filter: 'all' as FilterTypes,
   };
 
   const store = createStore(reducer, preloadStore, composeWithDevTools(applyMiddleware(thunk)));

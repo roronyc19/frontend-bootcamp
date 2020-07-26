@@ -4,7 +4,7 @@ async function fetchSomething() {
 }
 
 // Async functions always return a Promise
-fetchSomething().then(text => {
+fetchSomething().then((text) => {
   console.log('hello ' + text);
 });
 

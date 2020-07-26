@@ -2,7 +2,7 @@ import React from 'react';
 import { Todos } from '../TodoApp.types';
 
 export const TodoFooter = (props: any) => {
-  const itemCount = Object.keys(props.todos).filter(id => !props.todos[id].completed).length;
+  const itemCount = Object.keys(props.todos).filter((id) => !props.todos[id].completed).length;
   return (
     <footer>
       <span>

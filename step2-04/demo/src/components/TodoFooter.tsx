@@ -4,7 +4,7 @@ import { TodoContext } from '../TodoContext';
 
 export const TodoFooter = () => {
   const context = useContext(TodoContext);
-  const itemCount = Object.keys(context.todos).filter(id => !context.todos[id].completed).length;
+  const itemCount = Object.keys(context.todos).filter((id) => !context.todos[id].completed).length;
 
   return (
     <Stack horizontal horizontalAlign="space-between" verticalAlign="center">
