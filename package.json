@@ -28,7 +28,6 @@
     "@types/react": "^16.7.20",
     "@types/react-dom": "^16.0.11",
     "@types/react-redux": "^7.0.0",
-    "@types/redux": "^3.6.0",
     "@types/uuid": "^3.4.4",
     "body-parser": "^1.18.3",
     "copy-webpack-plugin": "^4.6.0",
@@ -52,8 +51,10 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.4.0",
     "@uifabric/fluent-theme": "^0.14.1",
     "@uifabric/theme-samples": "^0.1.4",
+    "chokidar": "3.4.2",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.9.1",
     "express": "^4.16.4",
@@ -66,7 +67,6 @@
     "react-redux": "^6.0.0",
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.8",
-    "redux-starter-kit": "^0.4.3",
     "redux-thunk": "^2.3.0"
   }
 }

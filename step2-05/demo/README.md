@@ -60,7 +60,7 @@ const store = createStore(reducer, initialState);
 
 ### Writing reducers
 
-We'll write our reducers with the help of some utilities from the official [`redux-starter-kit`](https://redux-starter-kit.js.org), which greatly decreases the amount of boilerplate needed. The process for designing and implementing reducers is as follows:
+We'll write our reducers with the help of some utilities from the official [`@reduxjs/toolkit`](https://@reduxjs/toolkit.js.org), which greatly decreases the amount of boilerplate needed. The process for designing and implementing reducers is as follows:
 
 #### 1. Organize reducers according to the keys of the state tree object
 
@@ -79,7 +79,7 @@ Given a state tree shaped like this:
 We would organize our reducers matching the keys of the state tree and combine them with [`combineReducers()`](https://redux.js.org/recipes/structuring-reducers/using-combinereducers):
 
 ```ts
-import { createReducer } from 'redux-starter-kit';
+import { createReducer } from '@reduxjs/toolkit';
 import { combineReducers } from 'redux';
 
 const reducer = combineReducers({
@@ -101,7 +101,7 @@ const reducer = combineReducers({
 
 #### 2. Write the reducers with mutables
 
-In plain Redux, reducers must make a copy of the state before making modifications, but [`createReducer()`](https://redux-starter-kit.js.org/api/createreducer) will automatically translate all the mutations to the state into immutable snapshots (!!!!!):
+In plain Redux, reducers must make a copy of the state before making modifications, but [`createReducer()`](https://@reduxjs/toolkit.js.org/api/createreducer) will automatically translate all the mutations to the state into immutable snapshots (!!!!!):
 
 ```ts
 // first argument: initial state

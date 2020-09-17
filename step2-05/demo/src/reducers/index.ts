@@ -1,6 +1,6 @@
 import { Store } from '../store';
 import { combineReducers } from 'redux';
-import { createReducer } from 'redux-starter-kit';
+import { createReducer } from '@reduxjs/toolkit';
 
 export const todosReducer = createReducer<Store['todos']>(
   {},
