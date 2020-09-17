@@ -16,7 +16,7 @@ In this exercise, we will work on implementing simple unit tests using Jest.
 
 ## How to use Jest
 
-Using `create-react-app` or other project generators, Jest should already be pre-configured. Running `npm test` usually will trigger it!
+Using `create-react-app` or other project generators, Jest should already be pre-configured. Running `yarn test` usually will trigger it!
 
 Setting up Jest in a new project is outside the scope of this course, but if you're interested in how it works, take a look at the bootcamp project's `jest.config.js` and `jest.setup.js` files or the [getting started documentation](https://jestjs.io/docs/en/getting-started).
 
@@ -121,7 +121,7 @@ it('tests async functions', async () => {
 
 ## Jest basics
 
-In this repo, we can start an inner loop development of tests by running `npm test` from the root of the `frontend-bootcamp` folder.
+In this repo, we can start an inner loop development of tests by running `yarn test` from the root of the `frontend-bootcamp` folder.
 
 Take a look at code inside `demo/src`:
 

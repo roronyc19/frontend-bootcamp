@@ -15,7 +15,7 @@ The second part will dive into more advanced topics like TypeScript, state manag
 - Open your terminal and use the `cd` (change directory) command to find an appropriate place for your code (for example, type `mkdir react-projects` followed by `cd react-projects` to create and go to a new empty folder dedicated to React development)
 - Type `git clone https://github.com/wiljwang/frontend-bootcamp.git` into the terminal to pull down a copy of the workshop code
 - Type `cd frontend-bootcamp` to change your current directory to the bootcamp folder
-- Type `npm install` to install all of the project dependencies
+- Type `yarn` to install all of the project dependencies
 - Type `code .` to open the bootcamp code in VS Code
   > If you're on a Mac, make sure you've followed [these steps](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line) first to make the `code` command available.
 
@@ -28,7 +28,7 @@ At this point, your VS Code window should look something like this:
 To start the dev "inner loop," run:
 
 ```
-npm start
+yarn start
 ```
 
 This will load the site shown below.

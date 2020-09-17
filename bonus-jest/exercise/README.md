@@ -2,7 +2,7 @@
 
 [Lessons](../..) | [Demo](../demo)
 
-Start the test runner by running `npm test` in the root of the `frontend-bootcamp` folder.
+Start the test runner by running `yarn test` in the root of the `frontend-bootcamp` folder.
 
 ## Basic testing
 

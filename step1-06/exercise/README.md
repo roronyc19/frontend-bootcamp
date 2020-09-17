@@ -1,6 +1,6 @@
 # Step 1.6 - Creating a state-driven UI (Exercise)
 
-If you don't already have the app running, start it by running `npm start` from the root of the `frontend-bootcamp` folder. Click the "exercise" link under day 1 step 6 to see results.
+If you don't already have the app running, start it by running `yarn start` from the root of the `frontend-bootcamp` folder. Click the "exercise" link under day 1 step 6 to see results.
 
 ### TodoFooter
 

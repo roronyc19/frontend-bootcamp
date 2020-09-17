@@ -2,7 +2,7 @@
 
 [Lessons](../..) | [Demo](../demo)
 
-If you don't already have the app running, start it by running `npm start` from the root of the `frontend-bootcamp` folder. Click the "exercise" link under day 2 step 6 to see results.
+If you don't already have the app running, start it by running `yarn start` from the root of the `frontend-bootcamp` folder. Click the "exercise" link under day 2 step 6 to see results.
 
 At the beginning of this exercise, the "Add" and "Clear Completed" buttons do not work. We'll be fixing that in this step!
 

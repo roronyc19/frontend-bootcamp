@@ -2,7 +2,7 @@
 
 [Lessons](../..) | [Demo](../demo) | [Final](../final)
 
-If you don't already have the app running, start it by running `npm start` from the root of the `frontend-bootcamp` folder.
+If you don't already have the app running, start it by running `yarn start` from the root of the `frontend-bootcamp` folder.
 
 Exercises will be completed under this step's `exercise/src` folder unless otherwise noted. You'll also want to open the [Step2-01 exercise page](http://localhost:8080/step2-01/exercise) to see the results as you work.
 
