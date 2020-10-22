@@ -10,7 +10,6 @@ let index = 0;
 
 const className = mergeStyles({
   padding: 25,
-  ...getTheme().effects.elevation4,
 });
 
 // Uncomment to see loadTheme
